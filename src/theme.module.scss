@@ -1,0 +1,17 @@
+/* Named Modules since it wont import otherwise */
+$bgd: #27233a;
+$accd: #505168;
+$bgl: #b3c0a4;
+$accl: #eaefd3;
+$bgm: #DCC48E;
+$bg: white;
+
+:export {
+    bg: $bg;
+    accd: $accd;
+    bgd: $bgd;
+    bgl: $bgl;
+    accl: $accl;
+    bgm: $bgm;
+}
+

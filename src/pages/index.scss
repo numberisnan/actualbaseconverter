@@ -1,0 +1,42 @@
+@import '../theme.module.scss';
+
+html {
+    background: $bgl;
+}
+
+.main {
+    background: $bg;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    border-radius: 10px;
+    font-family: 'Zilla Slab', monospace;
+    font-size: 25px;
+    margin: 3% auto;
+    color: $accd;
+}
+
+.author {
+    color: $bgm;
+}
+
+.converttext {
+    font-size: 150%;
+}
+
+.answerbox {
+    background: $accl;
+}
+
+.digit {
+    margin-left: 3px;
+    text-align: center;
+    margin: 4px;
+}
+
+main {
+    text-align: center;
+}
+
+h1 {
+    font-size: 200%;
+}

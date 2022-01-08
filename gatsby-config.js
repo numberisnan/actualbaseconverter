@@ -3,5 +3,7 @@ module.exports = {
     siteUrl: "https://www.yourdomain.tld",
     title: "actualbaseconverter",
   },
-  plugins: [],
+  plugins: [
+    `gatsby-plugin-react-helmet`,
+    'gatsby-plugin-sass'],
 };
