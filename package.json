@@ -25,5 +25,8 @@
     "react-dom": "^17.0.1",
     "react-helmet": "^6.1.0",
     "sass": "^1.46.0"
+  },
+  "devDependencies": {
+    "jest": "^27.4.7"
   }
 }

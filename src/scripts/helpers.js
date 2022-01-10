@@ -1,4 +1,8 @@
 exports.baseToTen = function(numArray, base) {
+    if (base <= 1 || !numArray.length) {
+        return NaN;
+    }
+
     var total = 0;
     for (var i = 0; i < numArray.length; i++) {
         total += numArray[i] * (base**i);
@@ -10,6 +14,8 @@ exports.baseToTen = function(numArray, base) {
 exports.tenToBase = function(num, base) {
     if (Number.isNaN(base) || base <= 1) { // To prevent infinite loops
         return [];
+    } else if (!num) {
+        return [0];
     }
 
     var resArray = [];
