@@ -30,6 +30,10 @@ test("1 base for tenToBase", () => {
     expect(fn.tenToBase(3, 1)).toEqual([]);
 });
 
+test("strange behavior for base 10 for tenToBase", () => {
+    expect(fn.tenToBase(1000000000000, 10)).toEqual([0,0,0,0,0,0,0,0,0,0,0,0,1]);
+});
+
 // baseToTen
 
 const binten = [0,1,0,1]

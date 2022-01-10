@@ -33,7 +33,7 @@ exports.tenToBase = function(num, base) {
 }
 
 function getBaseLog(base, y) {
-    return Math.log(y) / Math.log(base);
+    return Math.round(Math.log(y) / Math.log(base));
 }
 
 exports.standardBaseToArray = function(num, base) {
