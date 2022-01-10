@@ -63,8 +63,8 @@ class IndexPage extends React.Component {
             </div>
           </Box>
           <p>Result:</p> 
-          <Paper className="answerbox">
-            <Grid container direction="row-reverse">
+          <Paper>
+            <Grid container direction="row-reverse" className="answerbox">
               {
                 conversions.tenToBase(Number(this.state.num),
                 Number(this.state.convbase)).map(function(value) {
