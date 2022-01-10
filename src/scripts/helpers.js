@@ -1,4 +1,4 @@
-function baseToTen(numArray, base) {
+exports.baseToTen = function(numArray, base) {
     var total = 0;
     for (var i = 0; i < numArray.length; i++) {
         total += numArray[i] * (base**i);
@@ -7,12 +7,23 @@ function baseToTen(numArray, base) {
     return total;
 }
 
-function tenToBase(num, base) {
+exports.tenToBase = function(num, base) {
+    if (Number.isNaN(base) || base <= 1) { // To prevent infinite loops
+        return [];
+    }
+
     var resArray = [];
     // find largest base
-    var largestBase = Math.floor(getBaseLog(base, num))
-    
+    var i = Math.floor(getBaseLog(base, num))
+    var largestBase = base**i;
+    while (i >= 0) {
+        resArray[i] = Math.floor(num/largestBase);
+        num %= largestBase;
+        i--;
+        largestBase /= base;
+    }
 
+    return resArray;
 }
 
 function getBaseLog(base, y) {

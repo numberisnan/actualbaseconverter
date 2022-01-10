@@ -51,7 +51,7 @@ class IndexPage extends React.Component {
           </Box>
           <Box>
             <p>
-              An algorithmic base-to-base converter for all your eccentric base-converting needs! I made this since I couldn't find a converter for any bases except super common ones.
+              An algorithmic base-to-base converter for all your eccentric base-converting needs. I made this since I couldn't find a converter for any bases except super common ones.
             </p>
             <p>
               For bases other than 2, 10, and 16, input them as a <strong>list of space-seperated base 10 integers.</strong> For example, 12 in base 10 would be "1 1" in base 11.
@@ -66,11 +66,16 @@ class IndexPage extends React.Component {
           <Paper className="answerbox">
             <Grid container direction="row-reverse">
               {
-                
+                conversions.tenToBase(Number(this.state.num),
+                Number(this.state.convbase)).map(function(value) {
+                  return (
+                  <Grid item xs={1}>
+                    <Paper className="digit">{value}</Paper>
+                  </Grid>
+                  )
+                })
               }
-              <Grid item xs={1}>
-                <Paper className="digit">1</Paper>
-              </Grid>
+              
             </Grid>
           </Paper>
         </ThemeProvider>
