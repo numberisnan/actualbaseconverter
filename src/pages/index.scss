@@ -25,6 +25,8 @@ html {
 
 .answerbox {
     background: $accl;
+    min-height: 250px;
+    flex-grow: 1;
 }
 
 .digit {
