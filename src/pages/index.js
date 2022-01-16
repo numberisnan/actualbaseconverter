@@ -62,12 +62,12 @@ class IndexPage extends React.Component {
               Convert <TextField id="num" label="Number to convert" variant="outlined" color="secondary" onInput={this.fieldCallbackGenerator("num", this)}/> in base <TextField id="origbase" label="Original Base" variant="outlined" color="secondary" onInput={this.fieldCallbackGenerator("origbase", this)}/> to <TextField id="convbase" label="Base to convert to" variant="outlined" color="secondary" onInput={this.fieldCallbackGenerator("convbase", this)}/>
             </div>
           </Box>
-          <p>Result: (Read left to right, down to up)</p> 
+          <p>Result: (Read left to right, up to down)</p> 
           <Box>
-            <Grid container direction="row-reverse" className="answerbox">
+            <Grid container direction="row" className="answerbox">
               {
                 conversions.tenToBase(Number(this.state.num),
-                Number(this.state.convbase)).map(function(value) {
+                Number(this.state.convbase)).reverse().map(function(value) {
                   return (
                   <Grid item xs={1}>
                     <Paper className="digit">{value}</Paper>
